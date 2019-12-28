@@ -8,7 +8,7 @@ struct node {
 
 void print(struct node* n){
 	while(n!=NULL){
-		printf("%d ", n->data);
+		printf("%p\t:\t%d\t:\t%p\n", (void *)n, n->data, (void *)n->next);
 		n=n->next;
 	}
 	printf("\n");
