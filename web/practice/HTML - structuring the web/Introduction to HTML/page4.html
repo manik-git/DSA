@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta http-equiv="Content-type" content="html/text" charset="UTF-8">
+        <title>page 4</title>
+        <link rel="icon" href="images/favicon/hawk.jpg" type="image/x-icon">
+    </head>
+    <body>
+        <h1>Code example</h1>
+        <p>written on <time datetime="2022-03-19T08:30:15.12345"> 2022-03-19T08:30:15.12345 </time> </p>
+        <hr>
+        <h2>code:</h2>
+        <pre>
+            <code>
+    #include&lt;stdio.h&gt;;
+    int main(){
+        int dome
+        printf(hello world);
+        return 0;
+    }
+            </code>
+        </pre>
+        <p> 
+            use <kbd>ctrl</kbd> + <kbd>A</kbd> to select the all the text and then try running it in your local ide.
+            you will see errors like while declaring the variable <var>dome</var>, the semi-colon is missing (as shown below)
+        </p>
+
+        <p>
+            can you find all the errors before actually compiling and then check how correct you were?
+        </p>
+        <h2>output:</h2>
+        <pre>
+            <samp>
+    prog.c:1:18: warning: extra tokens at end of #include directive
+    #include&lt;stdio.h&gt;;
+                    ^
+    prog.c: In function ‘main’:
+    prog.c:4:21: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘printf’
+                        printf(hello world);
+                        ^
+    prog.c:4:28: error: ‘hello’ undeclared (first use in this function)
+                        printf(hello world);
+                                ^
+    prog.c:4:28: note: each undeclared identifier is reported only once for each function it appears in
+    prog.c:4:34: error: expected ‘)’ before ‘world’
+                        printf(hello world);
+                                    ^
+            </samp>
+        </pre>
+        <hr><hr>
+    </body>
+</html>
